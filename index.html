@@ -8,21 +8,14 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>恋爱计时器</title>
-    <style>
-        body {
+    <style>   
+    		body {
             -webkit-font-smoothing: antialiased;
             font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
-            background-image: url('bg.jpg');
+            /*background-image: url('bg.jpg');*/
             font-size: 85%;
-            min-height: 100%;
-            min-width: 100%;
-            height: 100%;
-            width: 100%;
-            position: fixed;
-            z-index: -1;
             margin: 0;
-        }
-        
+        }     
         h2 {
             font-size: 220%;
             font-weight: 400;
@@ -49,6 +42,9 @@
 </head>
 
 <body>
+	<div class="msg_desc" style="position:absolute; width:100%; height:100%; z-index:-1">
+		<img style="width:100%;height:100%;" src="bg.jpg" alt="">
+	</div>
     <div class="content">
         <h2>小仙女，我们已经在一起了</h2>
         <div class="timer">
