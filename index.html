@@ -33,6 +33,7 @@
             font-size: 180%;
             line-height: 1.5;
             margin: 1em 0;
+            color: cyan;
         }
         
         .timer b {
@@ -45,15 +46,16 @@
 	<div class="msg_desc" style="position:absolute; width:100%; height:100%; z-index:-1">
 		<img style="width:100%;height:100%;" src="bg.jpg" alt="">
 	</div>
+	
     <div class="content">
-        <h2>小仙女，我们已经在一起了</h2>
+        <h2 style="color: yellow;">小仙女，我们已经在一起了</h2>
         <div class="timer">
             <b id="d"></b> 天 <b id="h"></b> 小时 <b id="m"></b> 分钟 <b id="s"></b> 秒
         </div>
     </div>
-
+	
     <script>
-        function timer() {	
+        function timer() {		
             var start = new Date(2016, 4, 27); // 2015.7.2
             var t = new Date() - start;
             var h = ~~(t / 1000 / 60 / 60 % 24);
@@ -77,6 +79,24 @@
         timer();
         setInterval(timer, 1000);
     </script>
+    
+    <script>
+			var banners = ["lzs1.jpeg","lzs2.jpeg","lzs3.jpeg"]; // 图片地址
+			var counter = 0;
+			function run(){
+				setInterval(cycle,1000);  //重复运行cycle函数，周期1000ms
+			}
+			function cycle(){
+				counter++;
+				if(counter == banners.length)	
+					counter = 0;
+				document.getElementById("banner").src = banners[counter];
+			}
+		</script>
+	<body onload = "run();" style="text-align: center;vertical-align: middle;">
+		<img id="banner" alt="banner" src="lzs1.jpeg" style="width:320px;height: auto;">
+	</body>
+
 </body>
 
 </html>
